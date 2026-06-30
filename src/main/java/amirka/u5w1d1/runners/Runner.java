@@ -26,7 +26,7 @@ public class Runner implements CommandLineRunner {
     private double coverCharge;
 
     @Override
-    public void run(String... args) {
+    public void run(String... args) throws Exception {
 
         menu.printMenu();
 
