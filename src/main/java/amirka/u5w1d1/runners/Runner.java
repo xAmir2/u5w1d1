@@ -1,8 +1,7 @@
 package amirka.u5w1d1.runners;
 
 import amirka.u5w1d1.entities.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
@@ -10,18 +9,19 @@ import org.springframework.stereotype.Component;
 
 
 @Component
+@Slf4j
 public class Runner implements CommandLineRunner {
-    private static final Logger logger = LoggerFactory.getLogger(Runner.class);
+    //    private static final Logger logger = LoggerFactory.getLogger(Runner.class);
     @Autowired
-    Menu menu;
+    private Drink water;
     @Autowired
-    Pizza margherita;
+    private Pizza doubleCheese;
     @Autowired
-    Drink water;
+    private Drink lemonade;
     @Autowired
-    Pizza doubleCheese;
+    private Menu menu;
     @Autowired
-    Drink lemonade;
+    private Pizza margherita;
     @Value("${cover.charge}")
     private double coverCharge;
 
@@ -48,9 +48,9 @@ public class Runner implements CommandLineRunner {
         order1.addDrink(lemonade);
         order1.addDrink(water);
         System.out.println("\n");
-        logger.info(order.toString());
+        log.info(order.toString());
         System.out.println("\n");
-        logger.info((order1.toString()));
+        log.info((order1.toString()));
     }
 
 }

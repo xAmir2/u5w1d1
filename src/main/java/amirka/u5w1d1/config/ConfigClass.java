@@ -1,13 +1,10 @@
 package amirka.u5w1d1.config;
 
 import amirka.u5w1d1.entities.Drink;
-import amirka.u5w1d1.entities.Menu;
 import amirka.u5w1d1.entities.Pizza;
 import amirka.u5w1d1.entities.Topping;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.List;
 
 @Configuration
 public class ConfigClass {
@@ -115,8 +112,8 @@ public class ConfigClass {
 //                List.of(water, lemonade, wine)
 //        );
 //    }
-    @Bean
-    public Menu menu(List<Pizza> pizzaList, List<Drink> drinkList, List<Topping> toppingsList) {
-        return new Menu(pizzaList, toppingsList, drinkList);
-    }
+//    @Bean
+//    public Menu menu(List<Pizza> pizzaList, List<Drink> drinkList, List<Topping> toppingsList) {
+//        return new Menu(pizzaList, toppingsList, drinkList);
+//    }
 }

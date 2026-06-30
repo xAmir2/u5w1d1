@@ -1,7 +1,10 @@
 package amirka.u5w1d1.entities;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class Menu {
     private List<Pizza> pizzas;
     private List<Topping> toppings;
