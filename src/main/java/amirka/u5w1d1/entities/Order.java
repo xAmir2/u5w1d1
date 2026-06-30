@@ -59,7 +59,7 @@ public class Order {
 
         return "Order number: " + orderNumber +
                 "\nTable: " + table.getTableNumber() +
-                "\nStatus: " + status +
+                "\nOrder Status: " + status +
                 "\nSeats: " + seats +
                 "\nTime: " + orderTime +
                 "\nPizzas: " + pizzas +

@@ -39,9 +39,14 @@ public class Runner implements CommandLineRunner {
         Order order1 = new Order(2, table1, 5, coverCharge);
 
         order.addPizza(margherita);
+        order.addPizza(margherita);
+        order.addDrink(water);
         order.addDrink(water);
         order1.addPizza(doubleCheese);
+        order1.addPizza(margherita);
         order1.addDrink(lemonade);
+        order1.addDrink(lemonade);
+        order1.addDrink(water);
         System.out.println("\n");
         logger.info(order.toString());
         System.out.println("\n");
