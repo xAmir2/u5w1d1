@@ -19,7 +19,7 @@ public class ConfigClass {
 
     @Bean
     public Topping cheese() {
-        return new Topping("Cheese", 0.92, 69);
+        return new Topping("Cheese", 0.69, 92);
     }
 
     @Bean
@@ -93,26 +93,30 @@ public class ConfigClass {
         return doubleHam;
     }
 
+    //    @Bean
+//    public Menu menu(
+//            Pizza margherita,
+//            Pizza hawaiian,
+//            Pizza salamiPizza,
+//            Pizza doubleCheese,
+//            Topping tomato,
+//            Topping cheese,
+//            Topping ham,
+//            Topping pineapple,
+//            Topping salami,
+//            Topping onion,
+//            Drink water,
+//            Drink lemonade,
+//            Drink wine
+//    ) {
+//        return new Menu(
+//                List.of(margherita, hawaiian, salamiPizza, doubleCheese),
+//                List.of(tomato, cheese, ham, pineapple, salami, onion),
+//                List.of(water, lemonade, wine)
+//        );
+//    }
     @Bean
-    public Menu menu(
-            Pizza margherita,
-            Pizza hawaiian,
-            Pizza salamiPizza,
-            Pizza doubleCheese,
-            Topping tomato,
-            Topping cheese,
-            Topping ham,
-            Topping pineapple,
-            Topping salami,
-            Topping onion,
-            Drink water,
-            Drink lemonade,
-            Drink wine
-    ) {
-        return new Menu(
-                List.of(margherita, hawaiian, salamiPizza, doubleCheese),
-                List.of(tomato, cheese, ham, pineapple, salami, onion),
-                List.of(water, lemonade, wine)
-        );
+    public Menu menu(List<Pizza> pizzaList, List<Drink> drinkList, List<Topping> toppingsList) {
+        return new Menu(pizzaList, toppingsList, drinkList);
     }
 }
