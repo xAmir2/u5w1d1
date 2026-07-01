@@ -54,6 +54,10 @@ public class Order {
         return total;
     }
 
+    public double getCoverCharge() {
+        return coverCharge;
+    }
+
     @Override
     public String toString() {
 
